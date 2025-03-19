@@ -1,3 +1,5 @@
+# laurens first idea
+
 import ollama
 
 def initialize_llm(model_name):

@@ -1,3 +1,4 @@
+# laurens first idea
 from sentence_transformers import SentenceTransformer
 
 def get_embedding_model(model_name):
