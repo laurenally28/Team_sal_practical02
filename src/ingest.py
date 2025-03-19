@@ -103,7 +103,7 @@ def process_pdfs(data_dir):
                         chunk=str(chunk),
                         embedding=embedding,
                     )
-            print(f" -----> Processed {file_name}")
+            #print(f" -----> Processed {file_name}")
 
 
 def query_redis(query_text: str):
@@ -120,15 +120,15 @@ def query_redis(query_text: str):
     )
     # print(res.docs)
 
-    for doc in res.docs:
-        print(f"{doc.id} \n ----> {doc.vector_distance}\n")
+    #for doc in res.docs:
+        #print(f"{doc.id} \n ----> {doc.vector_distance}\n")
 
 
 def main():
     clear_redis_store()
     create_hnsw_index()
 
-    process_pdfs("data")
+    process_pdfs("/Users/laurenally/Desktop/DS4300/Team_sal_practical02/data")
     print("\n---Done processing PDFs---\n")
     query_redis("What is the capital of France?")
 
