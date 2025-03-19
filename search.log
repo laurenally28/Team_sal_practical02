@@ -1,0 +1,12 @@
+2025-03-19 19:40:14,182 - __main__ - INFO - 🔍 RAG Search Interface
+2025-03-19 19:40:14,182 - __main__ - INFO - Type 'exit' to quit
+2025-03-19 19:40:36,705 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2025-03-19 19:41:47,245 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-19 19:41:47,247 - __main__ - INFO - 
+--- Response ---
+2025-03-19 19:41:47,247 - __main__ - INFO -  A binary search tree is a data structure where every node in the tree has a left subtree that contains nodes with values less than its parent, and a right subtree that contains nodes with values greater than its parent. This makes it possible to quickly perform operations like search, insert, and delete while maintaining an O(log n) time complexity. However, for the binary search tree to function correctly, it needs to be sorted. AVL trees are a specific type of self-balancing binary search tree where the balance factor (height difference between left and right subtrees) is at most 1, ensuring that operations maintain their efficient time complexity.
+2025-03-19 19:43:15,264 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2025-03-19 19:44:02,432 - httpx - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-19 19:44:02,433 - __main__ - INFO - 
+--- Response ---
+2025-03-19 19:44:02,433 - __main__ - INFO -  The advantages of a Binary Search Tree include fast insert and fast search operations due to its property of being sorted, making it efficient for both searching and traversing. However, initial data must be sorted prior to insertion into the tree. Additionally, AVL trees, which are self-balancing binary search trees, maintain O(log n) time complexity for search, insert, and delete operations due to their balancing property.
