@@ -1,3 +1,5 @@
+# laurens first idea
+
 import redis
 from chromadb import Client
 
