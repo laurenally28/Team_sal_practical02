@@ -1,0 +1,384 @@
+[33mWARNING[0m:  [21-03-2025 17:43:22] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [21-03-2025 17:43:22] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component System
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component Posthog
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 17:43:22] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [21-03-2025 17:43:22] Started server process [[36m68555[0m]
+[32mINFO[0m:     [21-03-2025 17:43:22] Waiting for application startup.
+[32mINFO[0m:     [21-03-2025 17:43:22] Application startup complete.
+[32mINFO[0m:     [21-03-2025 17:43:22] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [21-03-2025 17:44:11] Shutting down
+[32mINFO[0m:     [21-03-2025 17:44:11] Waiting for application shutdown.
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component System
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component Posthog
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 17:44:11] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [21-03-2025 17:44:11] Application shutdown complete.
+[32mINFO[0m:     [21-03-2025 17:44:11] Finished server process [[36m68555[0m]
+[33mWARNING[0m:  [21-03-2025 17:57:02] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [21-03-2025 17:57:02] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component System
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component Posthog
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 17:57:02] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [21-03-2025 17:57:02] Started server process [[36m68953[0m]
+[32mINFO[0m:     [21-03-2025 17:57:02] Waiting for application startup.
+[32mINFO[0m:     [21-03-2025 17:57:02] Application startup complete.
+[32mINFO[0m:     [21-03-2025 17:57:02] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [21-03-2025 17:57:06] Shutting down
+[32mINFO[0m:     [21-03-2025 17:57:06] Waiting for application shutdown.
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component System
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component Posthog
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 17:57:06] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [21-03-2025 17:57:06] Application shutdown complete.
+[32mINFO[0m:     [21-03-2025 17:57:06] Finished server process [[36m68953[0m]
+[33mWARNING[0m:  [21-03-2025 17:57:36] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [21-03-2025 17:57:36] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component System
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component Posthog
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 17:57:36] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [21-03-2025 17:57:36] Started server process [[36m69021[0m]
+[32mINFO[0m:     [21-03-2025 17:57:36] Waiting for application startup.
+[32mINFO[0m:     [21-03-2025 17:57:36] Application startup complete.
+[32mINFO[0m:     [21-03-2025 17:57:36] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [21-03-2025 17:58:12] ::1:56101 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 17:58:12] ::1:56102 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 17:58:12] ::1:56102 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 17:58:12] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "GET /api/v2/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [21-03-2025 17:58:13] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:13] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:14] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 17:58:15] ::1:56101 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/query HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 17:58:33] ::1:56114 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/7a7029c0-3cc7-40d7-ae9b-0829b00254f5/query HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:01:18] Shutting down
+[32mINFO[0m:     [21-03-2025 18:01:18] Waiting for application shutdown.
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component System
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component Posthog
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 18:01:18] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [21-03-2025 18:01:18] Application shutdown complete.
+[32mINFO[0m:     [21-03-2025 18:01:18] Finished server process [[36m69021[0m]
+[33mWARNING[0m:  [21-03-2025 18:03:23] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [21-03-2025 18:03:24] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component System
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component SqliteDB
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component Posthog
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component LocalExecutor
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component SegmentAPI
+[36mDEBUG[0m:    [21-03-2025 18:03:24] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [21-03-2025 18:03:24] Started server process [[36m69306[0m]
+[32mINFO[0m:     [21-03-2025 18:03:24] Waiting for application startup.
+[32mINFO[0m:     [21-03-2025 18:03:24] Application startup complete.
+[32mINFO[0m:     [21-03-2025 18:03:24] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [21-03-2025 18:03:36] ::1:56172 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:03:36] ::1:56173 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:03:36] ::1:56173 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:03:36] ::1:56172 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 409
+[31mERROR[0m:    [21-03-2025 18:03:36] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/opentelemetry/instrumentation/asgi/__init__.py", line 743, in __call__
+    await self.app(scope, otel_receive, otel_send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 181, in __call__
+    raise app_exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 181, in __call__
+    raise app_exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/server/fastapi/__init__.py", line 120, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 173, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 175, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/server/fastapi/__init__.py", line 144, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 134, in async_wrapper
+    return await f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/server/fastapi/__init__.py", line 798, in create_collection
+    await to_thread.run_sync(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    ),
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/server/fastapi/__init__.py", line 787, in process_create_collection
+    return self._api.create_collection(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        name=create.name,
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        database=database,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        id=model.id,
+        ^^^^^^^^^^^^
+    ...<7 lines>...
+        database=database,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/analisebottinger/code/School/anaconda3/envs/practical_02/lib/python3.13/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection default_collection already exists
+[32mINFO[0m:     [21-03-2025 18:04:16] ::1:56192 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:04:16] ::1:56193 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:04:16] ::1:56193 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:04:16] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "GET /api/v2/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [21-03-2025 18:04:17] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:17] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:18] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/add HTTP/1.1" 201
+[32mINFO[0m:     [21-03-2025 18:04:19] ::1:56192 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a81108da-f672-4889-8a5d-253511a9e1dd/query HTTP/1.1" 200
