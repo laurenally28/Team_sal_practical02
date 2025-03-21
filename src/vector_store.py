@@ -106,15 +106,7 @@ class RedisVectorStore:
         except Exception as e:
             logger.error(f"Search error: {e}")
             return []
-import chromadb
-import uuid
 
-import chromadb
-import uuid
-import logging
-import numpy as np  # for consistency if needed
-
-logger = logging.getLogger(__name__)
 
 class ChromaVectorStore:
     def __init__(self, collection_name="ds_4300_proj_2", embedding_function=None):
@@ -126,11 +118,12 @@ class ChromaVectorStore:
             embedding_function (callable, optional): If provided, the collection will use this function
                 to compute embeddings when adding documents without a precomputed embedding.
         """
-        self.client = client = chromadb.HttpClient(host="localhost", port=8000)
-        self.collection = self.client.create_collection(
-            name=collection_name,
-            embedding_function=embedding_function
-        )
+        self.client = chromadb.HttpClient(host="localhost", port=8000)
+        if collection_name in self.client.list_collections():
+            self.collection = self.client.get_collection(name=collection_name, embedding_function=embedding_function)
+        else:
+            self.collection = self.client.create_collection(name=collection_name, embedding_function=embedding_function)
+
         logger.info(f"ChromaDBStore collection '{collection_name}' initialized.")
 
     def setup_index(self):
@@ -138,8 +131,6 @@ class ChromaVectorStore:
         For ChromaDB, you might want to clear an existing collection or recreate it.
         Here we'll assume that creating the collection is sufficient.
         """
-        # Depending on your use case, you may clear the collection.
-        # For now, we'll log that setup_index was called.
         logger.info("ChromaDBStore setup_index: collection is ready for use.")
 
     def store_embedding(self, file: str, page: str, chunk: str, embedding: list):

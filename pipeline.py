@@ -79,17 +79,21 @@ def interactive_search(vector_store, initial_query=None):
  # optional alternative using pandas
 
 def save_experiment_results(results, csv_file_path):
-    """Save a list of experiment results dictionaries to a CSV file."""
-    if not results:
-        logger.info("No results to save.")
-        return
-    fieldnames = list(results[0].keys())
-    with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
+    # Check if the CSV file already exists
+    file_exists = os.path.isfile(csv_file_path)
+
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
+
+    # Open file in append mode
+    with open(csv_file_path, 'a', newline='', encoding='utf-8') as csvfile:
+        fieldnames = list(results[0].keys()) if results else []
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
+        # Write header only if the file didn't exist before
+        if not file_exists:
+            writer.writeheader()
         for row in results:
             writer.writerow(row)
-    logger.info(f"Experiment results saved to {csv_file_path}")
 
 def main():
     data_dir = "data"
