@@ -1,3 +1,5 @@
 .vscode/
 chroma_data/
-/*.log
+*.log
+.DS_Store
+__pycache__/
