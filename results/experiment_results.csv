@@ -1,3 +1,175 @@
 embedding_model_name,vector_db_name,chunk_size,overlap,prep_strategy,response_time,memory_usage_bytes,query,rag_response,total_pipeline_time
 nomic-embed-text,redis,300,50,basic,4.224596261978149,246153216,What is Redis?,"Redis is a data structure store that primarily functions as a key-value (KV) store, but it can also be used with other models such as graph spatial full-text search vector time series and is capable of supporting ranking systems. It provides 16 databases by default, numbered from 0 to 15. Redis allows for direct interaction through a set of commands related to setting and getting key-value pairs and variations, with many language libraries available.",41.0007860660553
 nomic-embed-text,chroma,300,50,basic,5.292290210723877,448643072,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree where the height difference between left and right subtrees of any node is at most 1. This balancing property ensures that operations like search, insert, and delete maintain O(log n) time complexity. The balance factor of any node in an AVL tree is valid if it's 1, 0, or -1, indicating whether the subtree is left-heavy, right-heavy, or balanced respectively. When the balance factor becomes 2 or -2, rebalancing is required to maintain the balance property.",13.208866119384766
+nomic-embed-text,redis,300,50,basic,5.072355031967163,38240256,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree where the height difference between left and right subtrees (also known as balance factor) of any node is at most 1. This balancing property ensures that operations like search, insert, and delete maintain O(log n) time complexity.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,52.39117908477783,38240256,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"In a contiguously allocated list, all elements are stored in contiguous blocks of memory, which means that each element shares the same starting address. This allows for fast random access to any element in the list.
+
+On the other hand, in a linked list, each element (or node) is allocated separate memory, and each node points to the next node in the list using a memory address (i.e., a pointer). This means that accessing an element in the middle of the list requires traversing from the beginning of the list.
+
+The key differences between contiguously allocated lists and linked lists are:
+
+* Random access: Contiguous lists allow for fast random access to any element, while linked lists require traversing from the start.
+* Insertion/deletion: Linked lists can insert or delete elements at any position in the list without affecting adjacent elements, making them faster for this operation. However, contiguous lists have a fixed insertion point (usually at the end).
+* Memory usage: Contiguous lists use less memory because each element shares the same starting address, while linked lists use more memory since each element has its own separate allocation.
+
+In general, contiguous lists are better suited for applications that require frequent random access to elements, such as databases or data structures where fast lookup is crucial. Linked lists, on the other hand, are often used in situations where frequent insertion or deletion of elements is required, such as in queues or stacks.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,48.41216802597046,38240256,When are linked lists faster than contiguously-allocated lists? ,"Linked lists are faster than contiguously-allocated lists when it comes to inserting elements anywhere in the list, but they are slower for random access.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,42.76598906517029,38240256,Add 23 to the AVL Tree below.  What imbalance case is created with inserting 23?		30	     /  \	    25  35	   /  20	,"To determine the imbalance case created by inserting 23 into the given AVL tree, we need to analyze the balance factor of each node after insertion.
+
+The current state of the tree is:
+
+       30
+      / \
+     25  35
+    /  \
+   20   (empty)
+
+Inserting 23 would change the tree to:
+
+       30
+      / \
+     25  35
+    / \   
+   20  23
+
+The balance factor of node 25 is:
+    left subtree height: 20
+    right subtree height: 0 ( empty)
+    Balance factor = 20 - 0 = 20 ( greater than 1)
+
+The balance factor of node 30 is:
+    left subtree height: 25
+    right subtree height: 35
+    Balance factor = 25 - 35 = -10 ( less than -1)
+
+Since the balance factor of node 30 becomes -10, which is more than -2, we need to rebalance the tree. The imbalance case created by inserting 23 is LeftLeft Case A, where a node becomes unbalanced with a balance factor greater than 1 and its left child has a non-zero height.
+
+The corrected tree after balancing will be:
+       30
+      / \
+     25  35
+    / \   
+   20  (empty)
+
+This shows that the insertion of 23 into the AVL tree creates a LeftLeft Case A imbalance.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,109.62552976608276,38240256,Why is a B+ Tree a better than an AVL tree when indexing a large dataset?,"Based on the provided context, I don't have any information about B+ Trees being compared to AVL Trees in terms of their performance for indexing large datasets. The context only provides information about AVL Trees and B- Trees (not B+ Trees), as well as B-Trees. It appears that the comparison between AVL Trees and B-Trees (including B+ Trees) is not explicitly covered in the provided materials.
+
+However, I can provide some general insights. AVL Trees are self-balancing binary search trees that maintain a balance factor of at most 1, which ensures operations like search, insert, and delete have a time complexity of O(log n). They are suitable for indexing large datasets when storage is limited or data is frequently updated.
+
+B-Trees (including B+ Trees), on the other hand, are multiway trees with order M, where each node stores a maximum number of keys. They are optimized for disk space indexing and minimize disk access. B-Trees have several advantages over AVL Trees for indexing large datasets:
+
+1. **Disk efficiency**: B-Trees can store more data in each node compared to AVL Trees, making them more efficient for disk-based storage.
+2. **Balancing**: B-Trees maintain a balance between the height of the left and right subtrees, ensuring that search, insert, and delete operations have good performance characteristics.
+3. **Insertion efficiency**: B-Trees can handle insertion at leaf level, which reduces the number of nodes that need to be rebalanced.
+
+However, it's worth noting that B+ Trees are a specific type of B-Tree that only stores keys in their leaf nodes and pointers to children in their internal nodes. They are optimized for disk-based storage and are commonly used in databases and file systems.
+
+In summary, while AVL Trees are suitable for indexing large datasets when storage is limited or data is frequently updated, B-Trees (including B+ Trees) may be a better choice when disk space indexing is a concern due to their disk efficiency, balancing, and insertion efficiency advantages.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,72.12932205200195,38240256,What is disk-based indexing and why is it important for database systems?  ,"Disk-based indexing is a method used in database systems where each node stores keys and pointers to children, rather than storing key-value pairs as done in in-memory B-tree implementations. This approach allows the database system to minimize disk accesses by leveraging efficient storage technologies such as SSDs (Solid-State Drives) and HDDs (Hard Disk Drives).
+
+In a disk-based indexing system, each node stores only the keys that are needed for navigation, rather than storing additional data. This reduces the amount of data that needs to be stored on disk, making it more efficient.
+
+Disk-based indexing is important for database systems because it allows them to:
+
+1. Minimize disk accesses: By storing keys and pointers to children, disk-based indexing reduces the number of times the database system needs to access disk storage.
+2. Improve performance: Disk-based indexing can significantly improve query performance by reducing the time it takes to access data on disk.
+3. Increase scalability: By minimizing disk accesses, disk-based indexing enables database systems to handle large amounts of data and scale more efficiently.
+
+Overall, disk-based indexing is a critical component of modern database systems, enabling them to provide fast and efficient storage and retrieval of data.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,32.507063150405884,38240256,"In the context of a relational database system, what is a transaction?  ","In the context of a relational database system, a transaction is treated as an atomic unit and is fully executed or no parts of it are executed. It takes a database from one consistent state to another consistent state, ensuring that all data meets integrity constraints. The key characteristics of a transaction include:
+
+1. Atomicity: A transaction is treated as a single, indivisible unit of work.
+2. Consistency: A transaction ensures that the database starts and ends in a valid state.
+3. Isolation: Transactions appear isolated from each other, preventing conflicts and ensuring data integrity.
+
+In summary, a transaction in a relational database system is a logical unit of work that maintains data consistency and integrity by executing either all operations or none at all, while isolating itself from other transactions to prevent conflicts.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,31.96203589439392,38240256,Succinctly describe the four components of ACID compliant transactions. ,"The four components of ACID compliant transactions are:
+
+1. Atomicity: A transaction is treated as a single, indivisible unit.
+2. Consistency: The transaction maintains data consistency by ensuring all data meets its integrity constraints after execution.
+3. Isolation: Transactions are executed independently and cannot affect each other; this prevents Dirty Reads.
+4. Durability: Once committed, changes persist even in the event of a system failure.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,24.48659586906433,38240256,Why does the CAP principle not make sense when applied to a single-node MongoDB instance? ,"The CAP principle doesn't apply to a single-node MongoDB instance because it is not designed for distributed systems or networks where partitions can occur, which are the three components of the CAP theorem (Consistency, Availability, and Partition Tolerance). Since a single-node MongoDB instance is isolated from other nodes, partitions do not occur, and therefore, the CAP principle's partition tolerance aspect becomes irrelevant. As a result, the CAP theorem doesn't provide any guidance for a single-node database like MongoDB, which focuses on consistency and availability guarantees instead of partition tolerance.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,26.250458002090454,38240256,Describe the differences between horizontal and vertical scaling. ,"Horizontal scaling and vertical scaling are two different approaches to achieve scalability in distributed systems.
+
+Vertical scaling, also known as scaling up, involves increasing the power or capacity of individual components (e.g., servers) within a system by adding more resources such as CPU, memory, or storage. This approach relies on modifying the existing architecture to handle increased demand, which can be expensive and time-consuming.
+
+On the other hand, horizontal scaling, also known as scaling out, involves adding new components (e.g., nodes or instances) to a system to distribute the workload more evenly across multiple machines. This approach allows for greater flexibility and scalability without modifying the underlying architecture.
+
+The key differences between horizontal and vertical scaling are:
+
+1. **Architecture modification**: Vertical scaling requires modifying the existing architecture to handle increased demand, while horizontal scaling does not require significant changes to the system.
+2. **Resource allocation**: Horizontal scaling involves distributing resources across multiple machines, whereas vertical scaling relies on a single machine with increased capacity.
+3. **Scalability**: Both approaches can achieve scalability, but horizontal scaling is more suitable for systems that require high availability and low latency, as it allows for easier addition of new nodes without disrupting the system.
+4. **Cost and complexity**: Vertical scaling can be more expensive and complex due to the need for hardware upgrades or replacement, whereas horizontal scaling involves adding new machines with minimal disruption.
+
+In summary, vertical scaling focuses on increasing capacity within a single component or machine, while horizontal scaling emphasizes distributing workloads across multiple machines to achieve greater scalability and flexibility.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,41.94302821159363,38240256,Briefly describe how a key/value store can be used as a feature store. ,"A key/value store, primarily designed for storing and retrieving data as key-value pairs, can be utilized as a feature store by using its simplicity to store and manage features in an efficient manner.
+
+In this context, each feature becomes a unique key, while the corresponding value can be any type of data that makes sense for that particular feature. This allows for easy retrieval and management of features across different models or applications.
+
+For instance, you could use Redis, which is often used as a KV store, to implement a feature flag system where each feature's state (active/inactive) can be stored as a value in a hash map with the feature key as the key.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,34.34344792366028,38240256,When was Redis originally released? ,Redis was originally released in 2009.,825.2720429897308
+nomic-embed-text,redis,300,50,basic,17.563469171524048,38240256,"In Redis, what is the difference between the INC and INCR commands? ","In Redis, the INC (Increment) command increments a given key by 1, while the INCR (Atomic Increment) command also increments a given key by 1, but it ensures that only one thread or process can access and modify the value at any given time, preventing race conditions.
+
+Note that there is no such command as INCR in Redis. The correct commands are INC and INCRB (Atomic Increment).",825.2720429897308
+nomic-embed-text,redis,300,50,basic,38.16913390159607,38240256,What are the benefits of BSON over JSON in MongoDB?,"Based on the context, I can answer that BSON (Binary Serialized Object Notation) is a binary format used for storing and retrieving data in MongoDB. It extends JSON by including additional data types such as dates, timestamps, and binary data.
+
+The benefits of using BSON over JSON in MongoDB are:
+
+1. Lightweight: BSON is more lightweight than XML, which makes it easier to store and transmit data.
+2. Minimal overhead: BSON has a minimal overhead compared to other formats, making it efficient for storing and retrieving large amounts of data.
+3. Traversable: BSON allows for quick access and traversal of data, making it ideal for applications that require fast data retrieval.
+4. Fast encoding/decoding: BSON can be encoded and decoded quickly, which is essential for high-performance applications.
+
+In summary, BSON is a more efficient and lightweight format than JSON, making it well-suited for MongoDB's document-based storage model.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,32.7959258556366,38240256,Write a Mongo query based on the movies data set that returns the titles of all movies released between 2010 and 2015 from the suspense genre? ,"To write a MongoDB query that returns the titles of all movies released between 2010 and 2015 from the suspense genre, you can use the following query:
+
+```
+db.movies.find({
+  releaseYear: { $gt: 2010, $lt: 2016 },
+  genres: { $elemMatch: { name: ""Suspense"" } }
+}, {
+  title: 1,
+  releaseYear: 1
+})
+```
+
+This query uses the following MongoDB operators:
+
+- `$gt`: Greater than operator to filter releases between 2010 and 2015.
+- `$lt`: Less than operator to filter releases up to but not including 2016, so we use `2016` instead of `2015`.
+- `$elemMatch`: Allows you to select elements from an array using the `$` operator. In this case, we're selecting movies where at least one genre in the genres array is named ""Suspense"".
+
+The `.find()` method executes the query and returns a cursor with matching documents.
+ 
+ The `.project()` or `{}` as a second parameter allows you to specify which fields from each document should be returned in your results. In this case, we return only `title` and `releaseYear`.",825.2720429897308
+nomic-embed-text,redis,300,50,basic,34.31474685668945,38240256,What does the $nin operator mean in a Mongo query?,"In MongoDB, the `$nin` operator is used to select documents where a field does not contain one of the specified values. It's short for ""not in"". For example:
+
+```python
+db.collection.find({name: { $nin: [""John"", ""Alice""] }})
+```
+
+This would return all documents in the `collection` where the `name` field is neither ""John"" nor ""Alice"".
+
+In PyMongo, you can use it like this:
+
+```python
+from pymongo import MongoClient
+
+client = MongoClient(""mongodb://localhost:27017/"")
+db = client[""mydatabase""]
+collection = db[""mycollection""]
+
+# Find documents where name is not John or Alice
+results = collection.find({""name"": {""$nin"": [""John"", ""Alice""]}})
+
+for result in results:
+    print(result)
+```
+
+Note that `$nin` is case-sensitive, so if you need to match values regardless of case, you can use the `$in` operator with a case-insensitive lookup:
+
+```python
+db.collection.find({""name"": { $in: [""John"", ""alice""] }})
+```",825.2720429897308

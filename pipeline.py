@@ -98,7 +98,7 @@ def save_experiment_results(results, csv_file_path):
 def main():
     data_dir = "data"
     embedding_model_name = "nomic-embed-text"  # or your preferred model name
-    vector_db_name = "chroma"  # or "chroma"
+    vector_db_name = "redis"  # or "chroma"
     chunk_size = 300
     overlap = 50
     prep_strategy = 'basic'
