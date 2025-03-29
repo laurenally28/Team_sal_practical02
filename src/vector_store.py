@@ -122,7 +122,7 @@ class ChromaVectorStore:
         if collection_name in self.client.list_collections():
             self.collection = self.client.get_collection(name=collection_name, embedding_function=embedding_function)
         else:
-            self.collection = self.client.create_collection(name=collection_name, embedding_function=embedding_function)
+            self.collection = self.client.create_collection(name=collection_name, embedding_function=embedding_function, vector_dimension=self.vector_dim)
 
         logger.info(f"ChromaDBStore collection '{collection_name}' initialized.")
 
