@@ -27,6 +27,7 @@ def process_pdfs(data_dir, embedding_model, vector_store, chunk_size, overlap, p
 
                 for chunk_index, chunk in enumerate(chunks):
                     embedding = get_embedding(chunk, embedding_model)
+                    print(len(embedding))
                     vector_store.store_embedding(
                         file=file_name,
                         page=str(page_num),

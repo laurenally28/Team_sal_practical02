@@ -18,6 +18,7 @@ def get_embedding(text: str, model: str = "nomic-embed-text") -> list:
     return embeddings
 
 def sent_transformer_models(text: str, model_name: str): 
+    model_name = "all-MiniLM-L6-v2"
     model = SentenceTransformer(model_name)
     return model.encode(text).tolist()
 
