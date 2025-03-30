@@ -7,7 +7,7 @@ import ollama
 logger = logging.getLogger(__name__)
 
 def get_embedding(text: str, model: str = "nomic-embed-text") -> list:
-    logger.info(f"\n📌 Getting embedding for model: {model}")
+    logger.info(f" Getting embedding for model: {model}")
     
     if model == "nomic-embed-text": 
         embeddings = ollama_models(text, model)
@@ -18,6 +18,7 @@ def get_embedding(text: str, model: str = "nomic-embed-text") -> list:
     return embeddings
 
 def sent_transformer_models(text: str, model_name: str): 
+    model_name = "all-MiniLM-L6-v2"
     model = SentenceTransformer(model_name)
     return model.encode(text).tolist()
 

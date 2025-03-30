@@ -3,6 +3,8 @@ import numpy as np
 from redis.commands.search.query import Query
 import logging
 import chromadb
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+
 
 # Configure logging
 logging.basicConfig(
@@ -109,7 +111,7 @@ class RedisVectorStore:
 
 
 class ChromaVectorStore:
-    def __init__(self, collection_name="ds_4300_proj_2", embedding_function=None):
+    def __init__(self, collection_name="ds_4300_proj_2", embedding_function=SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")):
         """
         Initialize the ChromaDB client and collection.
         
@@ -122,7 +124,7 @@ class ChromaVectorStore:
         if collection_name in self.client.list_collections():
             self.collection = self.client.get_collection(name=collection_name, embedding_function=embedding_function)
         else:
-            self.collection = self.client.create_collection(name=collection_name, embedding_function=embedding_function)
+            self.collection = self.client.create_collection(name=collection_name, embedding_function=embedding_function, vector_dimension=self.vector_dim)
 
         logger.info(f"ChromaDBStore collection '{collection_name}' initialized.")
 
