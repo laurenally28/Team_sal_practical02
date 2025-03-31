@@ -146,9 +146,8 @@ def run_experiment(config, query):
 
 def main():
     # Parameter spaces
-    # need 786 dimensional embeddings, as small as possible to not use all of memory and break
-    #embedding_models = ["sentence-transformers/all-distilroberta-v1"]
-    embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2"]
+    # need 786 dimensional embeddings
+    embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
     vector_dbs = ["redis", "chroma"]
     chunk_sizes = [300, 500]
     overlaps = [0, 50]
