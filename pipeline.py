@@ -2,6 +2,7 @@ import os
 import time
 import logging
 import csv
+import argparse
 import psutil
 import pandas as pd
 import itertools
@@ -9,7 +10,7 @@ import itertools
 from src.preprocess_text import extract_text_from_pdf, preprocess_text, split_text_into_chunks
 from src.embeddings import get_embedding
 from src.vector_store import get_vector_store
-from src.llm_search import generate_rag_response
+from src.llm_search import generate_rag_response, interactive_search
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -105,7 +106,7 @@ def save_experiment_results(results, csv_file_path):
             writer.writerow(row)
 
 
-def run_experiment(config, query):
+def run_experiment(config, query, mode):
     data_dir = "data"
     start_time = time.time()
 
@@ -122,9 +123,10 @@ def run_experiment(config, query):
         config["overlap"],
         config["prep_strategy"]
     )
-
-    #results = interactive_search(vector_store, initial_query=query) --> for exam
-    results = run_predefined_search(vector_store, queries=query)
+    if mode == "interactive":
+        results = interactive_search(vector_store, initial_query=query) 
+    else:
+        results = run_predefined_search(vector_store, queries=query)
 
     mem_after = psutil.Process().memory_info().rss
     total_pipeline_time = time.time() - start_time
@@ -147,44 +149,66 @@ def run_experiment(config, query):
 def main():
     # Parameter spaces
     # need 786 dimensional embeddings
-    embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
-    vector_dbs = ["redis", "chroma"]
-    chunk_sizes = [300, 500]
-    overlaps = [0, 50]
-    prep_strategies = ["basic"]
-
-    # Static query for testing
-    query = ["What is an AVL Tree?", "What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?",
-            "When are linked lists faster than contiguously-allocated lists?"]
-
-    csv_file_path = "results/experiment_results.csv"
-
-    # Generate all combinations
-    all_combinations = list(itertools.product(
-        embedding_models,
-        vector_dbs,
-        chunk_sizes,
-        overlaps,
-        prep_strategies
-    ))
-
-    logger.info(f"Running {len(all_combinations)} configurations...")
-
-    for embedding_model, vector_db, chunk_size, overlap, prep_strategy in all_combinations:
+    args = get_cli_args()
+    if args.mode == "interactive":
         config = {
-            "embedding_model": embedding_model,
-            "vector_db": vector_db,
-            "chunk_size": chunk_size,
-            "overlap": overlap,
-            "prep_strategy": prep_strategy
-        }
+                "embedding_model": "nomic-embed-text",
+                "vector_db": "redis",
+                "chunk_size": 300,
+                "overlap": 50,
+                "prep_strategy": "basic"
+            }
+        run_experiment(config, query=None, mode=args.mode) 
+        
+    else:
+        embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
+        vector_dbs = ["redis", "chroma"]
+        chunk_sizes = [300, 500]
+        overlaps = [0, 50]
+        prep_strategies = ["basic"]
 
-        logger.info(f"Running config: {config}")
-        experiment_results = run_experiment(config, query)
-        save_experiment_results(experiment_results, csv_file_path)
+        # Static query for testing
+        query = ["What is an AVL Tree?", "What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?",
+                "When are linked lists faster than contiguously-allocated lists?"]
 
-    logger.info("All experiments completed!")
+        csv_file_path = "results/experiment_results_test.csv"
 
+        # Generate all combinations
+        all_combinations = list(itertools.product(
+            embedding_models,
+            vector_dbs,
+            chunk_sizes,
+            overlaps,
+            prep_strategies
+        ))
+
+        logger.info(f"Running {len(all_combinations)} configurations...")
+
+        for embedding_model, vector_db, chunk_size, overlap, prep_strategy in all_combinations:
+            config = {
+                "embedding_model": embedding_model,
+                "vector_db": vector_db,
+                "chunk_size": chunk_size,
+                "overlap": overlap,
+                "prep_strategy": prep_strategy
+            }
+
+            logger.info(f"Running config: {config}")
+            experiment_results = run_experiment(config, query, mode=args.mode)
+            save_experiment_results(experiment_results, csv_file_path)
+
+        logger.info("All experiments completed!")
+    
+
+def get_cli_args(): 
+    parser = argparse.ArgumentParser(description="pipeline execution for exam RAG")
+
+    # Add arguments
+    parser.add_argument('--mode', type=str, help='specifies if pipeline is interactive (exam ver). No arg assumes full experiment execution.', default='experiments')
+
+    # Parse arguments
+    args = parser.parse_args()
+    return args
 
 if __name__ == "__main__":
     main()
