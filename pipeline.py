@@ -66,7 +66,7 @@ def interactive_search(vector_store, initial_query=None):
     return results
 
 def run_predefined_search(vector_store, queries):
-    """Run a predefined list of queries for benchmarking."""
+    """Run a predefined list of queries for benchmarking"""
     logger.info("Running predefined queries...")
     results = []
 
