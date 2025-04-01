@@ -4370,3 +4370,260 @@ Linked List:
 
 In summary, a contiguous allocation list is suitable when you need fast random access and don't require frequent insertions or deletions at arbitrary positions. On the other hand, a linked list is more suitable when you need to frequently insert or delete elements at arbitrary positions, but can tolerate slower random access.",33.508790016174316,5087232,109.81081986427307
 distilroberta-base,chroma,500,50,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster for inserting anywhere in the list, but slower for random access.",8.43795108795166,5087232,109.81081986427307
+nomic-embed-text,redis,300,0,basic,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree that uses a balance factor to maintain its height and ensure that all levels are filled except for the last one. It is designed to minimize the height of the tree by rotating nodes when the balance factor becomes too high, thus preventing the tree from becoming unbalanced.",5.87953782081604,-431345664,24.069392919540405
+nomic-embed-text,redis,300,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"When it comes to memory allocation, there are two main approaches: contiguous allocation and linked structure usage.
+
+**Contiguous Allocation**
+
+In a contiguous allocation approach, all the elements of a list are stored in a single block of continuous memory locations. This means that each element is allocated a fixed size (typically equal to the size of a pointer or a small integer) at the beginning of the memory block, and then the remaining space is divided among the actual elements.
+
+**Linked Structure Usage**
+
+In a linked structure approach, each element of the list is stored separately, with only the pointers to the next and previous elements stored in adjacent memory locations. This means that each element has additional overhead due to the size of the pointers, which can be several bytes (depending on the language).
+
+The key differences between these two approaches are:
+
+1.  **Memory Usage**: Contiguous allocation is more memory-efficient because it stores all the elements in a single block of memory. Linked structures, on the other hand, require additional memory for the pointers.
+2.  **Random Access**: Contiguous allocation allows for fast random access (O(1) time complexity), while linked structures make random access slower (typically O(n) time complexity).
+3.  **Insertion/Deletion Efficiency**: Linked structures are generally faster for insertion and deletion operations because they only require updating the pointers of adjacent elements, whereas contiguous allocation requires shifting all subsequent elements in memory.
+4.  **Cache Locality**: Contiguous allocation typically exhibits better cache locality than linked structures, which can improve performance due to reduced page faults and improved CPU caching.
+
+Overall, contiguous allocation is a good choice when:
+
+*   Random access is crucial (e.g., databases, sorting algorithms).
+*   Insertion/deletion operations are frequent.
+*   Memory is limited, and every byte counts.
+
+On the other hand, linked structures might be more suitable when:
+
+*   You need to frequently insert or delete elements at arbitrary positions.
+*   Insertion/deletion operations dominate the overall workload.
+*   The data structure needs to support a large number of nodes with minimal memory overhead.",12.774640798568726,-431345664,24.069392919540405
+nomic-embed-text,redis,300,0,basic,When are linked lists faster than contiguously-allocated lists?,Linked lists are faster for inserting anywhere in the list.,1.5178759098052979,-431345664,24.069392919540405
+nomic-embed-text,redis,300,50,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree that maintains a balance factor (also known as height or h) at each node, which is calculated by subtracting the height of the left subtree from the height of the right subtree. The goal of an AVL Tree is to minimize its height and ensure that all levels are filled except for the last level.
+
+In an AVL Tree, when a new node is inserted into the tree, the tree is rebalanced using rotation (also known as insertion) operations when necessary. There are four types of imbalance cases:
+
+1. LL (Left-Left): The left child of the parent node becomes unbalanced by going down to the left twice.
+2. LR (Left-Right): The left child of the parent node becomes unbalanced by going down to the right once.
+3. RL (Right-Left): The right child of the parent node becomes unbalanced by going down to the left once.
+4. RR (Right-Right): The right child of the parent node becomes unbalanced by going down to the right twice.
+
+The tree is rebalanced using single rotation or double rotation operations, depending on the type of imbalance case. This ensures that the height of the tree remains relatively constant and that all levels are filled except for the last level.
+
+AVL Trees are used in many applications where fast search, insertion, and deletion of elements are required, such as in databases, file systems, and compiler design. They provide an efficient way to maintain a balanced binary search tree, which is essential for optimal performance in these applications.",10.021318197250366,9428992,27.038286924362183
+nomic-embed-text,redis,300,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"In a contiguous allocation, all elements of the list are stored in a single block of memory that is allocated as one chunk. This means that each element only requires a small amount of extra memory to store its address, typically 2-3 bytes (depending on the system's word size).
+
+On the other hand, in a linked structure, each element of the list requires additional memory to store a pointer to the next element in the list. This is because each element needs to keep track of where the next element is located.
+
+The main differences between these two types of lists are:
+
+1. **Memory usage**: Contiguous allocation typically uses less memory overall, since there are fewer pointers needed to store the addresses of adjacent elements.
+2. **Random access time**: Linked structures are slower for random access because you need to traverse the list from one element to another using the pointer, which can be time-consuming if the list is very large.
+3. **Insertion and deletion speed**: Contiguous allocation is generally faster for insertions and deletions, especially at the end of the list, since only a small amount of memory needs to be rearranged or reused.
+4. **Memory locality**: Linked structures can exhibit poor memory locality, leading to cache misses and slower performance due to the need to access non-contiguous locations in memory.
+5. **Insertion speed**: Contiguous allocation is generally faster for insertions anywhere in the list because you only need to update the pointer at the insertion point.
+
+In contrast, linked structures offer:
+
+1. **Faster insertions and deletions**: You can insert or delete elements anywhere in the list without having to shift the entire list.
+2. **Flexibility**: Linked structures are more flexible than contiguous allocation since they allow for easier insertion, deletion, and manipulation of elements.
+
+Overall, the choice between contiguous allocation and linked structures depends on the specific requirements of your application and trade-offs you're willing to make between memory usage, random access speed, and insertions/deletions speed.",12.107003927230835,9428992,27.038286924362183
+nomic-embed-text,redis,300,50,basic,When are linked lists faster than contiguously-allocated lists?,Linked lists are faster for inserting anywhere in the list but slower for random access.,1.6435537338256836,9428992,27.038286924362183
+nomic-embed-text,redis,500,0,basic,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree (BST) that maintains a balance factor between the height of its left and right subtrees. The balance factor at each node is calculated as `hLSThR`, where `hL` is the height of the left subtree and `hR` is the height of the right subtree.
+
+The AVL tree uses rotations to rebalance itself when the balance factor becomes too large, which could lead to an unbalanced tree. There are four cases of imbalance:
+
+1. **LL** (Left Left): When inserting a node into the left subtree of the left child.
+2. **LR** (Left Right): When inserting a node into the left subtree of the right child.
+3. **RL** (Right Left): When inserting a node into the right subtree of the left child.
+4. **RR** (Right Right): When inserting a node into the right subtree of the right child.
+
+When an imbalance occurs, an AVL tree performs one or two rotations to restore balance, depending on the specific case. The goal of an AVL tree is to minimize its height while maintaining a balanced structure.",8.426354885101318,-20901888,19.109617948532104
+nomic-embed-text,redis,500,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"In a contiguous allocation, all elements of the list are stored in consecutive bytes of memory, which allows for fast random access because you can simply calculate the index of an element to find it. This makes arrays faster for random access.
+
+On the other hand, in a linked structure, each element of the list only requires a few extra bytes of memory to store the link to the next element. While this provides flexibility and ease of insertion and deletion at any point in the list (except possibly at the end), it results in slower random access because you have to traverse from the start of the list to find an individual element.",5.435948133468628,-20901888,19.109617948532104
+nomic-embed-text,redis,500,0,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster for inserting anywhere in the list, but slower for random access.",1.8938727378845215,-20901888,19.109617948532104
+nomic-embed-text,redis,500,50,basic,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree (BST) data structure. It uses the ""all-or-nothing"" approach, where it either keeps the tree balanced or does not touch it at all, to maintain balance and prevent unbalanced trees. The height of an AVL tree is always within one of two values: either the height of its left subtree plus one or the height of its right subtree minus one. This ensures that the tree remains approximately balanced by performing rotations when necessary to keep this property true.",5.092051029205322,-1527808,19.219774961471558
+nomic-embed-text,redis,500,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"A contiguous list has all its elements stored in a single block of memory, whereas a linked list uses individual memory addresses to point to each element's location. In a contiguous list, you can access any element directly using its index, making it faster for random access (O1 time complexity). On the other hand, linked lists are slower for random access because you need to traverse the list from start to find an element (linear time complexity).
+
+However, linked lists have an advantage when it comes to inserting or deleting elements in the middle of the list. Since each element only needs a few memory addresses, you can simply update the pointers of adjacent elements to point to the new location, without having to shift all the other elements down. This makes insertions and deletions faster (O1 time complexity).
+
+In contrast, contiguous lists require shifting all the elements after the insertion or deletion point to make room for the new element, which takes linear time.
+
+So, the main differences between a contiguous list and a linked list are:
+
+* Random access: Contiguous lists are faster, while linked lists are slower.
+* Insertions and deletions: Linked lists are faster, while contiguous lists are slower.",8.443243980407715,-1527808,19.219774961471558
+nomic-embed-text,redis,500,50,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster for inserting anywhere in the list, but slower for random access.",1.866853952407837,-1527808,19.219774961471558
+nomic-embed-text,chroma,300,0,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1, also known as the balance factor being at most 1. This balancing property ensures that operations like search, insert, and delete maintain O(log n) time complexity.",3.290740966796875,-24264704,20.77458906173706
+nomic-embed-text,chroma,300,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"In a contiguous allocation method, all nx bytes of memory are allocated as a single chunk of memory, which can lead to excellent memory locality benefits and CPU caching. This means that when the CPU accesses a block of consecutive memory locations, it is likely to find the next location in the list already in the cache.
+
+On the other hand, in a linked structure method, each record needs x bytes additional space for 1 or 2 memory addresses, which are used to link individual records together in a chain. This requires no contiguous memory allocation, but can lead to poor memory locality and cache misses because the CPU may need to access multiple locations that are not adjacent in memory.
+
+In terms of performance, arrays (which use contiguous allocation) are generally faster for random access operations like searching or retrieving data by index, since the CPU can directly access the desired location. However, arrays can be slow for inserting or deleting elements at arbitrary positions, as this may require shifting other elements to fill the gap.
+
+Linked lists (which use linked structures), on the other hand, are generally faster for inserting or deleting elements at any position in the list, since only the affected nodes need to be updated. However, they can be slower for random access operations like searching or retrieving data by index, since the CPU needs to traverse the chain of links to find the desired location.
+
+Overall, the choice between contiguous allocation and linked structures depends on the specific use case and performance requirements. If fast random access is critical, arrays may be a better choice. If frequent insertions or deletions are more common, linked lists may be a better choice.",10.783053874969482,-24264704,20.77458906173706
+nomic-embed-text,chroma,300,0,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when inserting anywhere in the list, but slower for random access.",1.7134027481079102,-24264704,20.77458906173706
+nomic-embed-text,chroma,300,50,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between left and right subtrees (also known as the balance factor of any node) is at most 1. This balancing property ensures that operations like search, insert, and delete maintain O(log n) time complexity, making it suitable for applications requiring efficient data retrieval and insertion.",3.422849178314209,-8110080,17.29133892059326
+nomic-embed-text,chroma,300,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"The main differences between a contiguous list and a linked list are:
+
+**Contiguous List:**
+
+* Memory is allocated as a single chunk, allowing for fast random access using an index.
+* Fast insertion and deletion operations are only possible at the end of the list.
+* Requires memory reallocation when resizing.
+* Excellent memory locality benefits, which can improve CPU caching performance.
+
+**Linked List:**
+
+* Each record has additional space for 1 or 2 memory addresses to link it to the next record in the list.
+* Insertions and deletions are fast anywhere in the list because there is no need to reallocate contiguous memory.
+* Poor memory locality, which can cause cache misses and reduce performance.
+
+In summary, contiguous lists are faster for random access but slower for insertions/deletions except at the end. Linked lists, on the other hand, are faster for insertions/deletions anywhere in the list but slower for random access.",7.2009618282318115,-8110080,17.29133892059326
+nomic-embed-text,chroma,300,50,basic,When are linked lists faster than contiguously-allocated lists?,Linked lists are faster than contiguously-allocated lists for inserting anywhere in the list.,1.759227991104126,-8110080,17.29133892059326
+nomic-embed-text,chroma,500,0,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between left and right subtrees of any node is at most 1. This balancing property ensures that operations like search, insert, and delete maintain O(log n) time complexity. The goal of an AVL Tree is to minimize tree height by filling all levels except the last one, resulting in a balanced binary search tree.",3.5725948810577393,10252288,21.725048065185547
+nomic-embed-text,chroma,500,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"Based on the context, I can tell you that there is a significant difference between a contiguous allocation list and a linked list.
+
+In a contiguous allocation list, all records are stored as a single chunk of memory, which means they are stored contiguously in memory. This allows for fast random access because the CPU can directly calculate the address of any record using an index.
+
+On the other hand, a linked list is a data structure where individual records are stored separately and each one points to the next record. Each record needs additional space for only 1 or 2 memory addresses, which is used to link it to the previous and/or next record.
+
+The key differences between these two data structures are:
+
+*   **Random access:** Contiguous allocation lists have fast random access (O(1) time complexity), while linked lists have slow random access (O(n) time complexity).
+*   **Insertion/deletion:** Linked lists allow for fast insertion and deletion of records anywhere in the list (O(1) time complexity), but require updating multiple memory addresses. In contrast, contiguous allocation lists are slow for insertions/deletions except at the end.
+*   **Memory locality:** Contiguous allocation lists have excellent memory locality benefits, meaning that CPU caching is efficient because adjacent records are stored together in memory. Linked lists have poor memory locality due to the extra space needed for linking and may cause cache misses.
+*   **Space efficiency:** Contiguous allocation lists can be less space-efficient than linked lists if there is a lot of free space between records.
+
+In summary, contiguous allocation lists offer fast random access but are slow for inserting/deleting anywhere except at the end. Linked lists allow for faster insertion/deletion anywhere in the list, but have slower random access and require more memory due to the linking structure.",11.628074884414673,10252288,21.725048065185547
+nomic-embed-text,chroma,500,0,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when inserting anywhere in the list, but slower for random access.",1.8376917839050293,10252288,21.725048065185547
+nomic-embed-text,chroma,500,50,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1. This balancing property ensures that operations like search, insert, and delete maintain a time complexity of O(log n). The goal of an AVL Tree is to minimize its height by ensuring that all levels are filled except the last level.",3.5083537101745605,-16437248,23.023149967193604
+nomic-embed-text,chroma,500,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"In a contiguous allocation method, all records are stored in consecutive blocks of memory, allowing for fast random access using an index or pointer to a specific location. This approach provides excellent memory locality benefits, as the CPU cache can reuse recently accessed memory locations.
+
+On the other hand, a linked list uses individual records that contain only the necessary information (e.g., values and attributes) with additional space for one or two memory addresses. Each record is linked to the next one in the list using these memory addresses, creating a chain-like structure. This approach allows for fast insertions and deletions anywhere in the list, as each operation only affects the adjacent records.
+
+The key differences between contiguous allocation and linked structures are:
+
+*   **Random Access**: Contiguous allocation provides faster random access (O(1) time complexity), while linked lists have slower random access (O(n) time complexity).
+*   **Insertion/Deletion**: Linked lists allow for fast insertions and deletions anywhere in the list (O(1) time complexity), whereas contiguous allocation is slow for these operations except at the end (O(n) time complexity).
+*   **Memory Usage**: Contiguous allocation requires a fixed amount of memory equal to the number of records, while linked lists need more memory due to the additional space required for the pointers.
+*   **Cache Locality**: Contiguous allocation provides better cache locality benefits than linked lists, which can lead to increased performance.
+
+When deciding between contiguous allocation and linked structures, consider your specific use case:
+
+*   Choose contiguous allocation when:
+    *   You need fast random access to records.
+    *   Your dataset fits within a fixed memory limit.
+*   Choose linked structures when:
+    *   You need to frequently insert or delete elements in the middle of the list.
+    *   You require flexibility in adding or removing records without reallocation.",12.815666913986206,-16437248,23.023149967193604
+nomic-embed-text,chroma,500,50,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when inserting anywhere in the list, not just at the end.",1.9210560321807861,-16437248,23.023149967193604
+sentence-transformers/paraphrase-albert-small-v2,redis,300,0,basic,What is an AVL Tree?,"I don't know. The provided context does not mention AVL Trees. However, I can tell you that an AVL Tree is a self-balancing binary search tree data structure with a balance factor of at most one. It is used to maintain the balance of the tree during insertion and deletion operations, ensuring efficient search, insertion, and deletion operations with an average time complexity of O(log n).",4.515074253082275,4116480,78.93332123756409
+sentence-transformers/paraphrase-albert-small-v2,redis,300,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"A contiguous allocation is a method of storing elements in memory that have a continuous block of space, whereas a linked structure (also known as a dynamic array or linked list) stores each element separately with pointers to the next element. In a linked structure, each element points to the next one, allowing for efficient insertion and deletion of elements, but can lead to slower access times compared to contiguous allocation.
+
+In contrast, a list where memory is contiguously allocated will have all its elements stored in adjacent locations, making it faster to access any element by its index. However, adding or removing elements can be more expensive due to the need to move elements around when inserting or deleting an element in the middle of the list.
+
+Additionally, contiguous allocation allows for easier cache locality, which can improve performance, while linked structures do not take advantage of this optimization as much.",6.521368026733398,4116480,78.93332123756409
+sentence-transformers/paraphrase-albert-small-v2,redis,300,0,basic,When are linked lists faster than contiguously-allocated lists?,"I don't know. The provided context doesn't mention anything about the relative performance of linked lists and contiguously-allocated lists. It does discuss some data structures like hash tables, binary trees, caching layers, Redis, and graphs, but not linked lists versus contiguously-allocated lists.",3.173341989517212,4116480,78.93332123756409
+sentence-transformers/paraphrase-albert-small-v2,redis,300,50,basic,What is an AVL Tree?,"I don't know. The provided context doesn't mention AVL Trees. However, I can provide a brief overview of AVL Trees.
+
+An AVL Tree (Adelson-Velskii and Landis Tree) is a self-balancing binary search tree data structure. It's used to maintain the balance between the height of the left and right subtrees, ensuring efficient search, insertion, and deletion operations.
+
+AVL Trees are designed to keep the tree balanced by rotating nodes when the balance factor becomes too large. This ensures that the tree remains approximately balanced, with a height of log(n), where n is the number of nodes in the tree.
+
+While I couldn't find any information on AVL Trees within the provided context, they are indeed an important data structure in computer science.",6.673866033554077,-6778880,49.111135959625244
+sentence-transformers/paraphrase-albert-small-v2,redis,300,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"A contiguous allocation means that all elements of an array or list are stored in adjacent memory locations, whereas a linked structure uses non-contiguous memory locations to store each element as a separate entity (node). This results in differences in memory usage and search times.",3.38746976852417,-6778880,49.111135959625244
+sentence-transformers/paraphrase-albert-small-v2,redis,300,50,basic,When are linked lists faster than contiguously-allocated lists?,"I don't know. The provided text does not contain information about the relative speed of linked lists and contiguously-allocated lists. It only discusses the characteristics and applications of Redis, hash tables, and other data structures.",2.656153917312622,-6778880,49.111135959625244
+sentence-transformers/paraphrase-albert-small-v2,redis,500,0,basic,What is an AVL Tree?,"I don't know. The provided context discusses various data structures such as JSON, XML, Document Databases, Object-Oriented Programming, and more, but it does not mention AVL Trees.",3.2273330688476562,-4964352,46.0185182094574
+sentence-transformers/paraphrase-albert-small-v2,redis,500,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"A contiguous allocation means that all elements in the list are stored in consecutive locations of the memory, whereas a linked structure means that each element is stored separately with a pointer or reference to the next element. In a contiguous allocation, elements can be accessed quickly because they are stored contiguously, but inserting or deleting an element at any location may require shifting all subsequent elements.",4.393447160720825,-4964352,46.0185182094574
+sentence-transformers/paraphrase-albert-small-v2,redis,500,0,basic,When are linked lists faster than contiguously-allocated lists?,"I don't know. The provided context doesn't mention the performance characteristics of linked lists compared to contiguously-allocated lists. It discusses Redis, Hash Tables, and Binary Trees, but doesn't provide information on when linked lists would be faster than contiguously-allocated lists.",3.2095561027526855,-4964352,46.0185182094574
+sentence-transformers/paraphrase-albert-small-v2,redis,500,50,basic,What is an AVL Tree?,"I don't know. The provided context does not mention anything about AVL Trees. It talks about Binary JSON (BSON), Document Databases, Object-Oriented Programming, XML, and other topics, but not AVL Trees. If you'd like to provide more context or clarify what an AVL Tree is, I'll be happy to try and help.",3.954080820083618,33316864,49.20714020729065
+sentence-transformers/paraphrase-albert-small-v2,redis,500,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"A list where memory is contiguously allocated (also known as a contiguous array or homogeneous array) stores its elements in a single, unbroken block of memory. The elements are stored one after the other, without any gaps or pointers.
+
+On the other hand, a list that uses linked structures has each element as a separate object, and each object contains a reference (or pointer) to the next element in the sequence. This means that each element is not stored immediately next to the others, but rather, they are scattered throughout memory, with gaps between them.
+
+The main differences between these two types of lists are:
+
+1. Memory usage: Contiguous allocation uses less memory because all elements are stored in a single block.
+2. Insertion and deletion: Linked structures make insertion and deletion more complex and slower, as you need to update the pointers of adjacent elements.
+3. Search: Linked structures can be faster for searching, as each element has a direct reference to its next neighbor.
+
+In general, contiguous allocation is suitable for lists where elements are accessed sequentially or have specific constraints on their order (e.g., sorted lists). Linked structures are more versatile and can be used in situations where elements need to be inserted or deleted frequently.",8.660313129425049,33316864,49.20714020729065
+sentence-transformers/paraphrase-albert-small-v2,redis,500,50,basic,When are linked lists faster than contiguously-allocated lists?,"I don't know. The provided context does not mention the performance or speed of linked lists compared to contiguously-allocated lists, and there is no information about when a linked list would be faster.",2.542051076889038,33316864,49.20714020729065
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,0,basic,What is an AVL Tree?,"An AVL tree is a self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1, known as the balance factor. This balancing property ensures that operations like search, insert, and delete maintain a time complexity of O(log n). The goal of an AVL tree is to minimize its height while keeping all levels filled except for possibly the last level.",4.20287299156189,50065408,48.33678698539734
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"Based on the provided context, the main differences between a contiguous allocation list and a linked list are:
+
+Contiguous Allocation List:
+- Fast random access using an index (constant time)
+- Slow for insertions/deletions except at the end
+- Requires memory reallocation when resizing
+- Excellent memory locality benefits, which can improve CPU caching
+
+Linked List:
+- Slow random access (linear time)
+- Fast insertions and deletions anywhere in the list
+- No need for contiguous memory allocation
+- Poor memory locality may cause cache misses",4.370426177978516,50065408,48.33678698539734
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,0,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when it comes to inserting anywhere in the list, not just at the end. This is because linked lists can reorganize themselves to make room for a new insertion point, which allows for faster insertions in the middle of the list. In contrast, contiguously-allocated lists require shifting or re allocating memory, making them slower for insertions that aren't at the end of the list.",3.2007527351379395,50065408,48.33678698539734
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,50,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1. This balancing property ensures that operations like search, insert, and delete maintain a time complexity of O(log n). The balance factor of any node is used to determine if rebalancing is required, with valid values being 1, 0, or -1 (not explicitly mentioned in the provided context).",4.487155199050903,197029888,54.63535475730896
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"The main difference between a contiguous list and a linked list is how the memory is allocated.
+
+In a contiguous list, all nx bytes (where n is the number of records) are allocated as a single chunk of memory. This means that all the memory is stored contiguously in a block, allowing for fast random access using an index.
+
+On the other hand, a linked list uses individual records and allocates x bytes additional space for 1 or 2 memory addresses to link each record together. Each record is linked to the previous and next records in the list using these memory addresses. This structure allows for fast insertions and deletions anywhere in the list.
+
+The key differences between contiguous and linked lists are:
+
+* Random access: Contiguous lists allow for fast random access (constant time), while linked lists allow for slow random access (linear time).
+* Insertions/deletions: Linked lists allow for fast insertions and deletions anywhere in the list, while contiguous lists can be slower except at the end.
+* Memory allocation: Contiguous lists allocate all nx bytes as a single chunk of memory, while linked lists do not require contiguous memory allocation.
+
+In summary, contiguous lists are faster for random access but slower for inserting/deleting anywhere but the end. Linked lists are faster for inserting/deleting anywhere in the list but slower for random access.",8.54495906829834,197029888,54.63535475730896
+sentence-transformers/paraphrase-albert-small-v2,chroma,300,50,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguous-allocated lists when it comes to inserting anywhere in the list, but slower for random access.",1.5723960399627686,197029888,54.63535475730896
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,0,basic,What is an AVL Tree?,"An AVL Tree is a self-balancing binary search tree where the height difference between the left and right subtrees of any node is at most 1, also known as having a balance factor of 1 or less. This property ensures that operations like search, insert, and delete maintain O(log n) time complexity. The balancing property of an AVL Tree ensures that the tree remains approximately balanced after each insertion or deletion, which helps to minimize the height of the tree and maintain efficient search, insert, and delete operations.",4.500722885131836,-375160832,51.098443031311035
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,0,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"Based on the context provided, here's the answer to your query:
+
+The main difference between a contiguous list and a linked list is how they allocate memory.
+
+In a contiguous list, all nx bytes of memory are allocated as a single chunk of memory. This allows for fast random access using an index, with a constant time complexity. However, it can be slow for insertions and deletions, except at the end, as it requires reallocation of memory when resizing. Additionally, this approach provides excellent memory locality benefits, which can improve CPU caching.
+
+In contrast, a linked list allocates individual records x bytes apart, requiring additional space for only 1 or 2 memory addresses to link each record together. While this allows for fast insertions and deletions anywhere in the list with a linear time complexity, it does not require contiguous memory allocation and can handle insertions/deletions more efficiently.
+
+Overall, contiguous lists are faster for random access but slower for inserting anywhere but the end, whereas linked lists are faster for inserting anywhere in the list but slower for random access.",7.218371152877808,-375160832,51.098443031311035
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,0,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when it comes to inserting elements anywhere in the list, not just at the end. This is because in a linked list, each element only needs to store a reference to the next element, rather than having all its adjacent elements stored contiguously.",2.472623109817505,-375160832,51.098443031311035
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,50,basic,What is an AVL Tree?,"An AVL (Adelson-Velskii and Landis) Tree is a self-balancing binary search tree that maintains a balance between the height of its left and right subtrees. It ensures that the balance factor of any node, which is the difference between the heights of its left and right subtrees, is at most 1. This balancing property is what makes AVL trees unique and allows them to maintain O(log n) time complexity for operations like search, insert, and delete.
+
+The goal of an AVL tree is to minimize its height, with all levels filled except possibly the last level, which contains only one node. This is achieved through rotation operations when the balance factor becomes 2 or -2, indicating that the tree has become unbalanced.
+
+AVL trees are a type of binary search tree and have several key properties, including:
+
+1. Balance Factor: The balance factor of any node in an AVL tree is at most 1.
+2. Height: The height of an AVL tree is minimized by balancing its subtrees.
+3. Self-Balancing: AVL trees are self-balancing, meaning that they maintain their balance property even after insertions and deletions.
+
+Overall, AVL trees provide a way to efficiently store and retrieve data in a binary search tree while maintaining a balanced structure, ensuring efficient operations like search, insert, and delete.",8.870698928833008,-13713408,60.80981492996216
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,50,basic,What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?,"Based on the provided context, there are key differences between a contiguous allocation of memory and a linked list:
+
+1. **Memory Allocation**:
+   - Contiguous Memory Allocation: In this approach, all nx bytes for n records are allocated as a single chunk of memory. This method is fast for random access because the entire chunk can be accessed directly using an index.
+   - Linked List: Each record needs additional space (x bytes) for 1 or 2 memory addresses that link to other records in the list. This means individual records are not stored contiguously but form a chain, with each node linking to the next.
+
+2. **Random Access**:
+   - Contiguous Memory Allocation: Offers fast random access because the entire allocated chunk can be accessed directly using an index.
+   - Linked List: Provides slow random access because accessing any specific record requires traversing from the beginning of the list until reaching the desired node, which is linear time.
+
+3. **Insertion/Deletion**:
+   - Contiguous Memory Allocation: This method is slower for insertions/deletions except at the end of the list due to the need for reallocation when resizing the memory chunk.
+   - Linked List: Offers fast insertion and deletion capabilities anywhere in the list, as adding or removing records only involves updating pointers within the linked structure.
+
+4. **Memory Locality**:
+   - Contiguous Memory Allocation: Provides excellent memory locality benefits because all data is stored in a continuous block of memory, which can improve CPU caching.
+   - Linked List: Can lead to poor memory locality due to the disjoint nature of each record's storage, potentially causing cache misses.
+
+In summary, arrays are better suited for applications requiring fast random access but struggle with inserting or deleting elements anywhere except at the end. Conversely, linked lists excel in scenarios where insertion/deletion is frequently needed at any position within the list, albeit at the cost of slower random access times.",12.481405019760132,-13713408,60.80981492996216
+sentence-transformers/paraphrase-albert-small-v2,chroma,500,50,basic,When are linked lists faster than contiguously-allocated lists?,"Linked lists are faster than contiguously-allocated lists when it comes to inserting anywhere in the list, but they are slower for random access (i.e., accessing a specific element by its index).",2.080087184906006,-13713408,60.80981492996216
