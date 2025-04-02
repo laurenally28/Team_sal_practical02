@@ -4,6 +4,10 @@ from redis.commands.search.query import Query
 import logging
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+import os
+import pickle
+import faiss
+
 
 
 # Configure logging
@@ -153,7 +157,6 @@ class ChromaVectorStore:
         """
         Query the collection for documents similar to the given query embedding.
         """
-        # Perform the query using the query embedding.
         results = self.collection.query(
             query_embeddings=[query_embedding],
             n_results=top_k
@@ -172,14 +175,52 @@ class ChromaVectorStore:
         logger.debug("ChromaDBStore: search_embeddings completed.")
         return formatted_results
 
+class FaissVectorStore:
+    def __init__(self, dimension=768, index_file="faiss_index.pkl"):
+        self.dimension = dimension
+        self.index_file = index_file
+
+        if os.path.exists(index_file):
+            with open(index_file, "rb") as f:
+                self.index = pickle.load(f)
+        else:
+            # L2 distance metric
+            self.index = faiss.IndexFlatL2(dimension)
+
+        # Store metadata
+        self.data = []
+
+    def setup_index(self):
+        """Placeholder method to maintain compatibility with other vector stores."""
+        logger.info("FAISS does not require explicit index setup.")
+
+    def store_embedding(self, file, page, chunk, embedding):
+        embedding = np.array(embedding, dtype=np.float32).reshape(1, -1)
+        self.index.add(embedding)
+        self.data.append({"file": file, "page": page, "chunk": chunk})
+
+        # Save the index
+        with open(self.index_file, "wb") as f:
+            pickle.dump(self.index, f)
+
+    def search_embeddings(self, query_embedding, k=5):
+        query_embedding = np.array(query_embedding, dtype=np.float32).reshape(1, -1)
+        distances, indices = self.index.search(query_embedding, k)
+
+        results = []
+        for idx in indices[0]:
+            if idx < len(self.data):
+                results.append(self.data[idx])
+
+        return results
 
 
-
-def get_vector_store(db_name: str):
-    """Return the desired vector store based on configuration."""
-    if db_name == "redis":
+def get_vector_store(vector_db):
+    if vector_db == "redis":
         return RedisVectorStore()
-    elif db_name == "chroma":
+    elif vector_db == "chroma":
         return ChromaVectorStore()
+    elif vector_db == "faiss":
+        return FaissVectorStore()
     else:
-        raise ValueError(f"Unsupported vector database: {db_name}")
+        raise ValueError(f"Unsupported vector store: {vector_db}")
