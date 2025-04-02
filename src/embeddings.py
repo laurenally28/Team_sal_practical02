@@ -20,8 +20,9 @@ def get_embedding(text: str, model: str = "nomic-embed-text") -> list:
 
     return embeddings
 
-def sent_transformer_models(text: str, model_name: str): 
-    model = SentenceTransformer(model_name, device="cpu")  # Force CPU usage
+def sent_transformer_models(text: str, model_name: str):
+    # Force CPU usage to avoid runtime errors
+    model = SentenceTransformer(model_name, device="cpu")
     return model.encode(text).tolist()
 
 
@@ -33,7 +34,7 @@ def distilroberta_base_embedding(text: str):
 
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     with torch.no_grad():
-        outputs = model(**inputs).last_hidden_state  # Get hidden states
+        outputs = model(**inputs).last_hidden_state
 
     # Mean pooling across token embeddings to get a single 768D vector
     return outputs.mean(dim=1).squeeze().tolist()

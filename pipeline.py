@@ -162,8 +162,7 @@ def main():
         
     else:
         embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
-        vector_dbs = ["faiss"]
-        #vector_dbs = ["redis", "chroma", "faiss"]
+        vector_dbs = ["redis", "chroma", "faiss"]
         chunk_sizes = [300, 500]
         overlaps = [0, 50]
         prep_strategies = ["basic"]
