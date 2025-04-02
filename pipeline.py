@@ -162,7 +162,8 @@ def main():
         
     else:
         embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
-        vector_dbs = ["redis", "chroma"]
+        vector_dbs = ["faiss"]
+        #vector_dbs = ["redis", "chroma", "faiss"]
         chunk_sizes = [300, 500]
         overlaps = [0, 50]
         prep_strategies = ["basic"]
@@ -171,7 +172,7 @@ def main():
         query = ["What is an AVL Tree?", "What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?",
                 "When are linked lists faster than contiguously-allocated lists?"]
 
-        csv_file_path = "results/experiment_results_test.csv"
+        csv_file_path = "results/experiment_results.csv"
 
         # Generate all combinations
         all_combinations = list(itertools.product(
