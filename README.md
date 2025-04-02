@@ -9,34 +9,65 @@ In this project, you and your team will build a local Retrieval-Augmented Genera
 - `src/preprocess_text.py` -  preprocesses the input text for embedding and vector storage.
 - `analysis.ipynb` - notebook containing all relevant figures created from data in `results/experiment_results.csv`
 
-## Pipeline execution
-In your terminals: 
-1. create/activate environment 
+## Pipeline Execution
+
+### 1. Create/Activate Environment
 ```
 conda create -n practical_02_env
 conda activate practical_02_env
 ```
-1. install requirements
+
+### 2. Install Requirements
 ```
 pip install -r requirements.txt
 ```
 
-
-2. navigate to cloned repo location in terminal
+### 3. Navigate to Cloned Repo Location in Terminal
 ```
 cd ../path/to/Team_sal_practical02
-``` 
-3. execute pipeline 
-- for generating experiment data:
 ```
-# mode 1: experiments 
-python pipeline.py
+
+### 4. Execute Pipeline
+
+#### Mode 1: Running Experiments (Default)
+To generate experiment data across different configurations:
 ```
-- for running interactive version: 
+python pipeline.py --mode experiments
 ```
-# mode 2: interactive 
+
+You can also specify the LLM model to use (default is `llama`):
+```
+python pipeline.py --mode experiments --model mistral
+```
+Options for `--model`:
+- `llama` (default)
+- `mistral`
+
+#### Mode 2: Interactive Search
+To run an interactive RAG-based search:
+```
 python pipeline.py --mode interactive
 ```
+You can specify the model as well:
+```
+python pipeline.py --mode interactive --model mistral
+```
 
+### Available CLI Arguments
+- `--mode`: Execution mode (`experiments` or `interactive`). Default is `experiments`.
+- `--model`: Selects which LLM to use (`llama` or `mistral`). Default is `llama`.
 
+### Example Commands
+- Run experiments with default settings:
+  ```
+  python pipeline.py
+  ```
+- Run experiments using Mistral:
+  ```
+  python pipeline.py --mode experiments --model mistral
+  ```
+- Start an interactive search with Llama:
+  ```
+  python pipeline.py --mode interactive --model llama
+  ```
 

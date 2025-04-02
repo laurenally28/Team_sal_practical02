@@ -37,9 +37,10 @@ def process_pdfs(data_dir, embedding_model, vector_store, chunk_size, overlap, p
                     )
 
 
-def interactive_search(vector_store, initial_query=None):
-    logger.info("🔍 RAG Search Interface")
+def interactive_search(vector_store, initial_query=None, model_type="llama"):
+    logger.info(f"🔍 RAG Search Interface using {model_type.upper()}")
     logger.info("Type 'exit' to quit")
+
     query = initial_query
     results = []
 
@@ -52,7 +53,7 @@ def interactive_search(vector_store, initial_query=None):
 
         query_embedding = get_embedding(query)
         context_results = vector_store.search_embeddings(query_embedding)
-        response = generate_rag_response(query, context_results)
+        response = generate_rag_response(query, context_results, model_type=model_type)
 
         print(f"\nResponse: {response}")
         logger.info("--- End of Response ---")
@@ -64,11 +65,12 @@ def interactive_search(vector_store, initial_query=None):
             "response_time": end_time - start_time
         })
         query = None
+
     return results
 
-def run_predefined_search(vector_store, queries):
-    """Run a predefined list of queries for benchmarking"""
-    logger.info("Running predefined queries...")
+def run_predefined_search(vector_store, queries, model_type="llama"):
+    """Run a predefined list of queries for benchmarking with specified model."""
+    logger.info(f"Running predefined queries using {model_type.upper()}...")
     results = []
 
     for query in queries:
@@ -77,7 +79,7 @@ def run_predefined_search(vector_store, queries):
 
         query_embedding = get_embedding(query)
         context_results = vector_store.search_embeddings(query_embedding)
-        response = generate_rag_response(query, context_results)
+        response = generate_rag_response(query, context_results, model_type=model_type)
 
         end_time = time.time()
         results.append({
@@ -106,7 +108,7 @@ def save_experiment_results(results, csv_file_path):
             writer.writerow(row)
 
 
-def run_experiment(config, query, mode):
+def run_experiment(config, query, mode, model_type="llama"):
     data_dir = "data"
     start_time = time.time()
 
@@ -123,10 +125,11 @@ def run_experiment(config, query, mode):
         config["overlap"],
         config["prep_strategy"]
     )
+
     if mode == "interactive":
-        results = interactive_search(vector_store, initial_query=query) 
+        results = interactive_search(vector_store, initial_query=query, model_type=model_type)
     else:
-        results = run_predefined_search(vector_store, queries=query)
+        results = run_predefined_search(vector_store, queries=query, model_type=model_type)
 
     mem_after = psutil.Process().memory_info().rss
     total_pipeline_time = time.time() - start_time
@@ -140,6 +143,7 @@ def run_experiment(config, query, mode):
             "response_time": res["response_time"],
             "memory_usage_bytes": mem_after - mem_before,
             "total_pipeline_time": total_pipeline_time,
+            "llm_model": model_type,
         }
         experiment_results.append(row)
 
@@ -150,16 +154,17 @@ def main():
     # Parameter spaces
     # need 786 dimensional embeddings
     args = get_cli_args()
+
     if args.mode == "interactive":
         config = {
-                "embedding_model": "nomic-embed-text",
-                "vector_db": "redis",
-                "chunk_size": 300,
-                "overlap": 50,
-                "prep_strategy": "basic"
-            }
-        run_experiment(config, query=None, mode=args.mode) 
-        
+            "embedding_model": "nomic-embed-text",
+            "vector_db": "redis",
+            "chunk_size": 300,
+            "overlap": 50,
+            "prep_strategy": "basic"
+        }
+        run_experiment(config, query=None, mode=args.mode, model_type=args.model)
+
     else:
         embedding_models = ["nomic-embed-text", "sentence-transformers/paraphrase-albert-small-v2", "distilroberta-base"]
         vector_dbs = ["redis", "chroma", "faiss"]
@@ -167,13 +172,14 @@ def main():
         overlaps = [0, 50]
         prep_strategies = ["basic"]
 
-        # Static query for testing
-        query = ["What is an AVL Tree?", "What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?",
-                "When are linked lists faster than contiguously-allocated lists?"]
+        query = [
+            "What is an AVL Tree?",
+            "What is the difference between a list where memory is contiguously allocated and a list where linked structures are used?",
+            "When are linked lists faster than contiguously-allocated lists?"
+        ]
 
         csv_file_path = "results/experiment_results.csv"
 
-        # Generate all combinations
         all_combinations = list(itertools.product(
             embedding_models,
             vector_dbs,
@@ -194,7 +200,7 @@ def main():
             }
 
             logger.info(f"Running config: {config}")
-            experiment_results = run_experiment(config, query, mode=args.mode)
+            experiment_results = run_experiment(config, query, mode=args.mode, model_type=args.model)
             save_experiment_results(experiment_results, csv_file_path)
 
         logger.info("All experiments completed!")
@@ -202,10 +208,8 @@ def main():
 
 def get_cli_args(): 
     parser = argparse.ArgumentParser(description="pipeline execution for exam RAG")
-
-    # Add arguments
-    parser.add_argument('--mode', type=str, help='specifies if pipeline is interactive (exam ver). No arg assumes full experiment execution.', default='experiments')
-
+    parser.add_argument("--mode", type=str, help="Execution mode", default="experiments")
+    parser.add_argument("--model", type=str, help="LLM model (llama/mistral)", default="llama")
     # Parse arguments
     args = parser.parse_args()
     return args
