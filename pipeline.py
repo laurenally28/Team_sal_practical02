@@ -178,7 +178,7 @@ def main():
             "When are linked lists faster than contiguously-allocated lists?"
         ]
 
-        csv_file_path = "results/experiment_results.csv"
+        csv_file_path = "results/experiment_results_final.csv"
 
         all_combinations = list(itertools.product(
             embedding_models,
